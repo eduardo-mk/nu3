@@ -1,5 +1,5 @@
 import * as React from "react";
-import Navbar, { NavbarTopElements } from './navbar/nav-bar'
+import Navbar, { NavbarTopElements } from './component/navbar'
 export interface myProps {
     compiler: string,
     framework: string,

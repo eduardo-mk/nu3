@@ -10,6 +10,7 @@ export interface NavbarProps {
 
 function generateTop( titles : Array<NavbarTopElements>, handlerFn: (event: React.MouseEvent)=> void ) {
     return titles.map((element, index)=>{
+        console.log(element.title)
         return (
             // :( => Bad Practice to set indexes as key but no id from BEnd up to this point.
             <li onClick={ handlerFn } key={index}>{element.title}</li>
