@@ -1,21 +1,25 @@
 import * as React from "react";
-import Navbar, { NavbarTopElements } from './component/navbar'
+import Navbar from './composition/navbar';
+import Button from '@material-ui/core/Button';
 export interface myProps {
-    compiler: string,
-    framework: string,
+  compiler: string,
+  framework: string,
 }
-const titles = 
-[{ title: 'Calculator', id: 108 }, { title: 'Data Base', id: 109 }, { title: 'Records', id: 110 }];
+const elements =
+  [{ title: 'Calculator', id: 108 }, { title: 'Data Base', id: 109 }, { title: 'Records', id: 110 }];
 const handler = (event: React.MouseEvent) => {
-    console.log(event.currentTarget)
- }
+  console.log(event.currentTarget);
+}
 
 
 export const Nu3app = (props: myProps) => {
-    return (
-        <section>
-            <Navbar titles={titles} handlerFn={handler} ></Navbar>
-            <h1>Hello from {props.compiler} and {props.framework}</h1>
-        </section>
-    )
+  return (
+    <section>
+      <Navbar elements={elements} handlerFn={handler} ></Navbar>
+      <h1>Hello from {props.compiler} and {props.framework}</h1>
+      {/* <Button variant="contained" color="primary">
+        Hello World
+            </Button> */}
+    </section>
+  )
 };
